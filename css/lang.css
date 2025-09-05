@@ -1,0 +1,58 @@
+/* Genel stil */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #000000, #b30000); /* kırmızı-siyah geçiş */
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* tam ekran kapla */
+}
+
+/* Ortadaki kutu */
+.lang-container {
+  text-align: center;
+  background: rgba(255, 255, 255, 0.05); /* şeffaf kutu */
+  padding: 2rem 3rem;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+}
+
+/* Başlık */
+.lang-container h1 {
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+}
+
+/* Butonlar */
+.lang-buttons {
+  margin-top: 1.5rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.lang-btn {
+  text-decoration: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 12px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.lang-btn.tr {
+  background: #fff;
+  color: #b30000;
+}
+
+.lang-btn.en {
+  background: #fff;
+  color: #000;
+}
+
+.lang-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 15px rgba(255,255,255,0.4);
+}
