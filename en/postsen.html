@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>News</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <style>
+    .posts-list {
+      list-style: none;        /* klasik noktalı listeyi kaldır */
+      padding: 0;
+    }
+    .posts-list li {
+      margin: 1rem 0;
+      padding: 1rem;
+      border-bottom: 1px solid #ccc;
+    }
+    .posts-list a {
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: #b30000;
+      text-decoration: none;
+    }
+    .posts-list a:hover {
+      text-decoration: underline;
+    }
+    .posts-list p {
+      margin: 0.5rem 0 0;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-flex">
+      <img src="../images/logo.png" alt="Logo" class="logo">
+      <h1 class="site-title">RedHScience</h1>
+      <nav>
+        <a href="indexen.html">Home Page</a>
+        <a href="abouten.html">About</a>
+        <a href="postsen.html" class="active">News</a>
+        <a href="contacten.html">Contact</a>
+        |
+        <a href="../tr/posts.html">TR</a> | 
+        <a href="../en/postsen.html">EN</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <h2>News</h2>
+    <ul class="posts-list">
+      <li>
+        <a href="postsssen/posten1.html">First</a>
+        <p>Statik blogumu nasıl kurduğumu anlatıyorum...</p>
+      </li>
+      <li>
+        <a href="postsssen/posten2.html">Second</a>
+        <p>Kırmızı-beyaz temalı modern bir tasarım üzerine...</p>
+      </li>
+      <li>
+        <a href="postsssen/posten3.html">Third</a>
+        <p>Blogumu Cloudflare Pages’e nasıl yükledim...</p>
+      </li>
+    </ul>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; All rights belongs to RedHScience</p>
+  </footer>
+</body>
+</html>
