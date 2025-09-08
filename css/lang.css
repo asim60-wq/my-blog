@@ -1,13 +1,15 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background: linear-gradient(135deg, #000000, #b30000);
+  background: url('altay-solars-system.png') no-repeat center center fixed;
+  background-size: cover;
   color: white;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
 }
+
 
 .lang-container {
   text-align: center;
