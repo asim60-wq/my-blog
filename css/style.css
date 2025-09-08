@@ -20,7 +20,7 @@ body {
 
 /* Header */
 .site-header {
-  background-color: rgba(179, 0, 0); /* kırmızı, %80 opaklık */
+  background-color: rgba(83, 22, 29); /* kırmızı, %80 opaklık */
   color: white;
   padding: 1rem 0;
 }
@@ -122,3 +122,4 @@ form button:hover {
   padding: 1rem;
   margin-top: 2rem;
 }
+
