@@ -95,19 +95,19 @@ body {
 /* Tooltip */
 .tooltip {
   position: absolute;
-  left: 30px; /* Gezegenin sağında görünmesi için */
-  top: 50%;
-  transform: translateY(-50%);
-  background-color: rgba(0,0,0,0.8);
+  background: rgba(0,0,0,0.85);
   color: #fff;
   padding: 8px 12px;
   border-radius: 8px;
   pointer-events: none;
   opacity: 0;
   transition: opacity 0.3s;
-  white-space: nowrap;
-  z-index: 10;
+  white-space: normal;        /* tek satıra sıkışmasın */
+  max-width: 250px;           /* ekranı taşırmasın */
+  word-wrap: break-word;      /* uzun kelimeleri böl */
+  z-index: 1000;
 }
+
 
 .planet:hover .tooltip {
   opacity: 1;
