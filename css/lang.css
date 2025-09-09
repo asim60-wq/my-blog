@@ -41,18 +41,19 @@ body {
 }
 
 .lang-buttons {
-  display: inline-block;
+  position: relative;      /* ripple efekt için gerekli */
+  display: inline-block;   /* ayrı kutular olmasını sağlar */
   padding: 12px 20px;
   border-radius: 12px;
-  background: linear-gradient(135deg, #FEFCEF, #6600f);
+  background-color: transparent;
   border: 2px solid #007bff;
-  color: white;
+  color: #007bff;
   font-weight: bold;
   text-decoration: none;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-  transform: scale(0.9);
-  opacity: 0;
-  animation: fadeInUp 0.8s forwards;
+  text-align: center;
+  cursor: pointer;
+  overflow: hidden;        /* ripple efektinin taşmasını engeller */
+  transition: all 0.3s ease;
 }
 
 .lang-buttons:nth-child(2) {
