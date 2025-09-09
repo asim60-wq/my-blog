@@ -40,7 +40,14 @@ body {
   margin: 30px 0;
 }
 
-.lang-buttons {
+.lang-select {
+  display: flex;           /* butonları yan yana dizer */
+  gap: 20px;               /* aralarındaki boşluk */
+  justify-content: center; /* ortaya hizalar */
+  margin: 30px 0;
+}
+
+.lang-btn {
   position: relative;      /* ripple efekt için gerekli */
   display: inline-block;   /* ayrı kutular olmasını sağlar */
   padding: 12px 20px;
@@ -56,13 +63,10 @@ body {
   transition: all 0.3s ease;
 }
 
-.lang-buttons:nth-child(2) {
-  animation-delay: 0.3s; /* ikinci buton biraz gecikmeli gelir */
-}
-
-.lang-buttons:hover {
-  transform: scale(1.1) rotate(-2deg);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+.lang-btn:hover {
+  background-color: #007bff;
+  color: white;
+  transform: scale(1.05);
 }
 
 @keyframes fadeInUp {
