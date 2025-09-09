@@ -21,8 +21,27 @@
       <a href="en/indexen.html" class="lang-btn en">🇬🇧 English</a>
     </div>
   </div>
+  <!-- Inline JS -->
+<script>
+document.querySelectorAll(".lang-btn").forEach(btn => {
+  btn.addEventListener("click", function(e) {
+    let ripple = document.createElement("span");
+    ripple.classList.add("ripple");
+    this.appendChild(ripple);
+
+    let x = e.clientX - this.offsetLeft;
+    let y = e.clientY - this.offsetTop;
+    ripple.style.left = `${x}px`;
+    ripple.style.top = `${y}px`;
+
+    setTimeout(() => ripple.remove(), 600);
+  });
+});
+</script>
+
 </body>
 </html>
+
 
 
 
