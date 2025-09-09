@@ -94,6 +94,47 @@ body {
   color: white;
   transform: scale(1.05);
 }
+.planet {
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform-origin: center;
+}
+
+/* Yıldız görünümleri */
+.planet::before {
+  content: "★";
+  font-size: 25px;
+  color: rgba(255, 255, 255, 0.9);
+  text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff;
+  transition: transform 0.3s, color 0.3s, text-shadow 0.3s;
+}
+
+/* Hover efekti */
+.planet:hover::before {
+  transform: scale(1.5);
+  color: #FFD700;
+  text-shadow: 0 0 10px #fff, 0 0 20px #FFD700, 0 0 30px #FFD700;
+}
+
+/* Başlangıç animasyonu */
+@keyframes flyIn {
+  0% {
+    transform: rotate(0deg) translateY(-500px) rotate(0deg);
+    opacity: 0;
+  }
+  50% {
+    transform: rotate(720deg) translateY(0px) rotate(-720deg);
+    opacity: 1;
+  }
+  100% {
+    transform: rotate(0deg) translateY(0px) rotate(0deg);
+    opacity: 1;
+  }
 @keyframes twinkle {
   0% {
     transform: scale(1) translateY(0);
