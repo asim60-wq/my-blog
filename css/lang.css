@@ -46,7 +46,19 @@ body {
   justify-content: center; /* ortaya hizalar */
   margin: 30px 0;
 }
+.planet {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: rgba(255,255,255,0.5);
+  cursor: pointer;
+  transition: transform 0.3s;
+}
 
+.planet:hover {
+  transform: scale(1.2);
+}
 .lang-btn {
   position: relative;      /* ripple efekt için gerekli */
   display: inline-block;   /* ayrı kutular olmasını sağlar */
@@ -78,4 +90,17 @@ body {
     transform: translateY(0) scale(1);
     opacity: 1;
   }
+}
+/* Tooltip */
+.tooltip {
+  position: absolute;
+  background-color: rgba(0,0,0,0.8);
+  color: #fff;
+  padding: 8px 12px;
+  border-radius: 8px;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s;
+  white-space: nowrap;
+  z-index: 10;
 }
