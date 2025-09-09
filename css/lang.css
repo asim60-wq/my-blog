@@ -48,8 +48,8 @@ body {
 }
 .planet {
   position: absolute;
-  width: 40px;
-  height: 40px;
+  width: 20px;
+  height: 20px;
   border-radius: 50%;
   background-color: rgba(255,255,255,0.5);
   cursor: pointer;
@@ -94,6 +94,8 @@ body {
 /* Tooltip */
 .tooltip {
   position: absolute;
+  left: 60px; /* Gezegenin sağında görünmesi için */
+  top: 50%;
   background-color: rgba(0,0,0,0.8);
   color: #fff;
   padding: 8px 12px;
