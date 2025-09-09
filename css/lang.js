@@ -2,7 +2,10 @@ const tooltip = document.createElement('div');
 tooltip.className = 'tooltip';
 document.body.appendChild(tooltip);
 
-document.querySelectorAll('.planet').forEach(planet => {
+document.querySelectorAll('.planet').forEach((planet, index) => {
+  // Animasyonu başlat
+  planet.style.animation = `flyIn 1s ease-out forwards`;
+  planet.style.animationDelay = `${index * 0.1}s`; // her gezegen hafif gecikmeli
 
   planet.addEventListener('mouseenter', () => {
     tooltip.innerHTML = `<strong>${planet.dataset.name}</strong><br>${planet.dataset.info}`;
