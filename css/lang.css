@@ -51,7 +51,6 @@ body {
   width: 25px;
   height: 25px;
   cursor: pointer;
-  transition: transform 0.3s;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -60,15 +59,18 @@ body {
 .planet::before {
   content: "★";
   font-size: 25px;
-  color: rgba(255,255,255,0.9);
+  color: rgba(255, 255, 255, 0.9);
   text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff;
+  animation: twinkle 2s infinite alternate;
+  transition: transform 0.3s, color 0.3s, text-shadow 0.3s;
 }
-
 
 .planet:hover::before {
-  transform: scale(1.4);
-  color: #FFD700;    /* hover’da altın sarısı */
+  transform: scale(1.5);
+  color: #FFD700; /* Altın sarısı */
+  text-shadow: 0 0 10px #fff, 0 0 20px #FFD700, 0 0 30px #FFD700;
 }
+
 
 
 .lang-btn {
@@ -92,7 +94,20 @@ body {
   color: white;
   transform: scale(1.05);
 }
-
+@keyframes twinkle {
+  0% {
+    transform: scale(1) translateY(0);
+    opacity: 0.8;
+  }
+  50% {
+    transform: scale(1.1) translateY(-2px);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1) translateY(0);
+    opacity: 0.85;
+  }
+}
 @keyframes fadeInUp {
   from {
     transform: translateY(30px) scale(0.9);
